@@ -20,7 +20,7 @@ pip install shamsi-datetime
 
 ## Basic Usage
 
-```
+```python
 from shamsi_datetime import ShamsiDateTime
 import numpy as np
 
