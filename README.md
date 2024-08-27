@@ -21,6 +21,10 @@ pip install shamsi-datetime
 ## Basic Usage
 
 ```python
+from shamsi_datetime import ShamsiDateTime
+# if you are using with numpy
+import numpy as np
+
 # Create a Shamsi date with specific values
 # میتونید ورودی رو خالی بزارید یا دلخواه وارد کنید (روز، ماه، سال)
 shamsi_date = ShamsiDateTime(1403, 5, 6)
