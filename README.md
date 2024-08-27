@@ -21,24 +21,25 @@ pip install shamsi-datetime
 ## Basic Usage
 
 ```python
-from shamsi_datetime import ShamsiDateTime
-import numpy as np
-
 # Create a Shamsi date with specific values
+# میتونید ورودی رو خالی بزارید یا دلخواه وارد کنید (روز، ماه، سال)
 shamsi_date = ShamsiDateTime(1403, 5, 6)
-print(f"\nSpecific Shamsi Date: {shamsi_date}")
+print(f"\nتاریخ شمسی دلخواه: {shamsi_date}")
 
 # Create a Shamsi date with the current date
+# تاریخ امروز
 current_shamsi_date = ShamsiDateTime()
-print(f"Current Shamsi Date: {current_shamsi_date}")
+print(f"تاریخ امروز: {current_shamsi_date}")
 
 # Convert to Gregorian (NumPy datetime64)
+# تبدیل تاریخ شمسی به میلادی بر حسب تاریخ امروز یا تاریخ ورودی دلخواه
 gregorian_date = shamsi_date.to_gregorian()
-print(f"Gregorian Date: {gregorian_date}")
+print(f"تاریخ میلادی برحسب تاریخ شمسی: {gregorian_date}")
 
 # Convert back to Shamsi
+# با استفاده از متد زیر میتونید تاریخ میلادی رو به شمسی تبدیل کنید
 shamsi_converted_back = ShamsiDateTime.from_gregorian(gregorian_date)
-print(f"Converted Back to Shamsi: {shamsi_converted_back}\n")
+print(f"تبدیل تاریخ میلادی به شمسی: {shamsi_converted_back}\n")
 ```
 
 ## Features
