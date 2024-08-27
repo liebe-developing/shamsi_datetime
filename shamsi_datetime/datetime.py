@@ -1,9 +1,15 @@
 import numpy as np
 import jdatetime
+from datetime import datetime
 
 class ShamsiDateTime:
-    def __init__(self, year, month, day):
-        self.shamsi_date = jdatetime.date(year, month, day)
+    def __init__(self, year=None, month=None, day=None):
+        if year is None or month is None or day is None:
+            # Default to the current date
+            current_date = jdatetime.date.today()
+            self.shamsi_date = current_date
+        else:
+            self.shamsi_date = jdatetime.date(year, month, day)
     
     def to_gregorian(self):
         """Convert the Shamsi date to Gregorian date in NumPy datetime64 format."""
