@@ -8,6 +8,7 @@ The Shamsi DateTime package allows you to:
 
 - Create and manipulate Shamsi (Jalali) dates.
 - Convert Shamsi dates to Gregorian dates and vice versa.
+- format dates in both Persian and English.
 - Easily integrate with NumPy for date manipulations and analysis.
 
 ## Installation

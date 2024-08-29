@@ -16,3 +16,7 @@ print(f"Gregorian Date: {gregorian_date}")
 # Convert back to Shamsi
 shamsi_converted_back = ShamsiDateTime.from_gregorian(gregorian_date)
 print(f"Converted Back to Shamsi: {shamsi_converted_back}\n")
+
+# To show Day of the week, Year, Day of the month and Month; use below example:
+print(current_shamsi_date.format_shamsi())  # پنج شنبه - ۸ شهریور ۱۴۰۳
+print(current_shamsi_date.format_gregorian()) # Thursday - 2024 29 August
